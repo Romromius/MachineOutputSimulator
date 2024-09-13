@@ -7,7 +7,7 @@ class Output:
         self.flush = True
         self.alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
         self.numbers = '0123456789'
-        self.speed = 10
+        self.speed = 30
 
     def print(self, text: str = '', end: str = '\n'):
         for i in text:
