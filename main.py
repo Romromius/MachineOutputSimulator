@@ -32,6 +32,9 @@ if __name__ == "__main__":
         if random.uniform(0, 100) < new_line_possibility:
             screen.print()
             new_line_possibility = 0
+            if random.uniform(0, 100) < 80:
+                time.sleep(1.5)
+
         if random.uniform(0, 100) < 10:
             screen.print(random.choice(['GLORY TO THE WATERMELON!',
                                         'DIE MELON',
