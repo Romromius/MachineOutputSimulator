@@ -26,7 +26,7 @@ if __name__ == "__main__":
     screen = Output()
     new_line_possibility = 0
     INCREMENT = .5
-    for i in range(50):
+    while True:
         time.sleep(.05)
         screen.work()
         if random.uniform(0, 100) < 10:
