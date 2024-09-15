@@ -20,7 +20,6 @@ def check_for_updates():
 def pull_updates():
     # Pull updates from remote repository
     subprocess.run(["git", "pull"], check=True)
-    time.sleep(1)
 
 
 def main():
@@ -53,7 +52,8 @@ if __name__ == "__main__":
         pull_updates()
         # After pulling updates, just run main.py
         print("Running updated main.py...")
-        main()
     else:
         print("No updates found, running main.py...")
-        main()
+
+    time.sleep(1)
+    main()
