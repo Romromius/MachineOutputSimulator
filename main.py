@@ -20,6 +20,7 @@ def check_for_updates():
 def pull_updates():
     # Pull updates from remote repository
     subprocess.run(["git", "pull"], check=True)
+    time.sleep(1)
 
 
 def main():
