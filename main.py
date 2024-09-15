@@ -1,7 +1,8 @@
-import time
-import random
 import os
+import random
 import subprocess
+import sys
+import time
 
 
 def check_for_updates():
@@ -22,6 +23,8 @@ def pull_updates():
 
 
 def main():
+    print(sys.platform)
+    quit()
     os.system('clear')
     os.system('cls')
     space = 0
@@ -39,7 +42,12 @@ def main():
 
 
 if __name__ == "__main__":
-    if check_for_updates():
+    try:
+        update_avalible = check_for_updates()
+    except subprocess.CalledProcessError:
+        print('No network connection.')
+        update_avalible = False
+    if update_avalible:
         print("Updates found! Pulling updates...")
         pull_updates()
         # After pulling updates, just run main.py
