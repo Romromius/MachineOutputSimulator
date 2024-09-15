@@ -29,7 +29,7 @@ def main():
         os.system('cls')
     space = 0
     while True:
-        for i in range(80):
+        for i in range(40):
             if space > random.uniform(0, 2):
                 print(' ', end='', flush=True)
                 space = 0
@@ -38,6 +38,7 @@ def main():
                 space += .1
             time.sleep(0.05)
         time.sleep(random.uniform(1.0, 2.0))  # Random delay between 1.0 and 2.0 seconds
+        print()
         print()
 
 
