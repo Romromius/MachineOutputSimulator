@@ -2,8 +2,6 @@ import time
 import random
 import os
 import subprocess
-os.system('clear')
-os.system('cls')
 
 
 def check_for_updates():
@@ -23,12 +21,9 @@ def pull_updates():
     subprocess.run(["git", "pull"], check=True)
 
 
-def run_main():
-    # Run the main.py script
-    subprocess.run(["python", "main.py"])
-
-
 def main():
+    os.system('clear')
+    os.system('cls')
     space = 0
     while True:
         for i in range(80):
@@ -49,7 +44,7 @@ if __name__ == "__main__":
         pull_updates()
         # After pulling updates, just run main.py
         print("Running updated main.py...")
-        run_main()
+        main()
     else:
         print("No updates found, running main.py...")
-        run_main()
+        main()
