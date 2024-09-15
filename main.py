@@ -23,10 +23,10 @@ def pull_updates():
 
 
 def main():
-    print(sys.platform)
-    quit()
-    os.system('clear')
-    os.system('cls')
+    if 'linux' in sys.platform:
+        os.system('clear')
+    elif 'win' in sys.platform:
+        os.system('cls')
     space = 0
     while True:
         for i in range(80):
